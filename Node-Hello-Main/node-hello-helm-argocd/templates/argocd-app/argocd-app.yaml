@@ -1,0 +1,11 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: node-hello
+  namespace: node-hello-n
+spec:
+  project: default
+  source:
+    repoURL: “https://github.com/chittemrajesh2/Node-Hello-Docker-K8-Helm-ArgoCD.git”
+    targetRevision: HEAD
+    path: helm/node-hello
